@@ -13,17 +13,16 @@ public class HW3 {
 
     static Scanner sc = new Scanner(System.in);
     static Random random = new Random();
-    public static void main(String[] args) {
-        while ( true )
-        {
-        int exit = 0;
 
+    public static void main(String[] args) {
+        while (true) {
+            int exit = 0;
 
 
             int number = random.nextInt(10); // генерация случайного числа 0-100
             System.out.println("Угадайте число от 0 до 10");
 
-            System.out.println(number);
+            System.out.println(number); // увидеть какое число загадано рандомно
 
             int maxTryCount = 3; //количество попыток
 
@@ -33,31 +32,42 @@ public class HW3 {
                 if (number == userAnswer) {
                     System.out.println("Поздравляем, вы угадали \n Повторить игру - 1, выход - 0");
                     exit = sc.nextInt();
-                    if ( exit == 0) {
-                    } else if (exit == 1) break; //выход из цикла
+                    if (exit == 0) {
+                        return;
+                    } else {
+                        break;
+                    } //выход из цикла
 
                 } else if (userAnswer > number) {
-                    System.out.println("Ваше число больше, чем загадал компьютер. ");
+                    System.out.println("Ваше число больше, чем загадал компьютер. " + "\nУ вас осталось, попыток: " + (maxTryCount - tryCount));
 
 
                 } else if (userAnswer < number) {
-                    System.out.println("Ваше число меньше, чем загадал компьютер. ");
+                    System.out.println("Ваше число меньше, чем загадал компьютер. " + "\nУ вас осталось, попыток: " + (maxTryCount - tryCount));
                 }
 
                 if (tryCount == maxTryCount) {
-                    System.out.println("Вы проиграли!");
-                    break;
+                    System.out.println("Вы проиграли! \n Повторить игру - 1, выход - 0");
+                    exit = sc.nextInt();
+                    if (exit == 0) {
+                        return;
+                    } else {
+                        break;
+                    }
+
+
                 }
-
-
             }
-
-
-//            System.out.println("У вас осталось, попыток: " + (maxTryCount - tryCount));
-
-                }
         }
     }
+}
+
+
+
+
+
+
+
 
 
 
