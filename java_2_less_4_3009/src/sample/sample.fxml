@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!--GridPane.rowIndex="0" GridPane.columnIndex="0"  GridPane.rowIndex="10" GridPane.columnIndex="0" -->
+
+<BorderPane maxHeight="400.0" maxWidth="600.0" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <stylesheets>
+      <URL value="@style.css" />
+   </stylesheets>
+    <top>
+        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <image>
+                <Image url="@img/iconChat.png" />
+            </image>
+        </ImageView>
+<!--        <Button onAction="#" translateX="415.0">-->
+<!--            <graphic>-->
+<!--                <ImageView fitHeight="48" fitWidth="48" >-->
+<!--                    <image>-->
+<!--                        <Image url="@img/exit.png" />-->
+<!--                    </image>-->
+<!--                </ImageView>-->
+<!--            </graphic>-->
+<!--        </Button>-->
+
+    </top>
+
+    <center>
+        <TextArea fx:id="chat" maxHeight="350.0" maxWidth="550.0" prefHeight="350" prefWidth="450" BorderPane.alignment="CENTER" />
+    </center>
+
+   <bottom>
+      <Button fx:id="btnAdd" accessibleRole="IMAGE_VIEW" onAction="#clickBtnAddText" text="отправить" textAlignment="CENTER" textFill="WHITE">
+         <graphic>
+
+         <TextField fx:id="textAddChat" onAction="#clickBtnAddText" prefHeight="27.0" prefWidth="385.0" promptText="напишите сообщение" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+
+
+
+      </Button>
+  </bottom>
+
+
+
+</BorderPane>

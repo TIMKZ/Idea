@@ -1,0 +1,9 @@
+.root {
+-fx-background-color: #d3d3d3;
+}
+
+
+#btnAdd {
+-fx-background-color: #686868;
+-fx-border-color: #6600ff;
+}
