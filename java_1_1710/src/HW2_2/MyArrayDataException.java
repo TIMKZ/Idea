@@ -8,6 +8,7 @@ public class MyArrayDataException extends NumberFormatException {
 
     MyArrayDataException(int i, int j) {
         super("Ошибка по адресу" + "[" + i + "]" + "[" + j + "]");
+
     }
 
 
